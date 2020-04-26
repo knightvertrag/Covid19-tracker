@@ -1,5 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'dart:async';
 
 Future<Data> fetchData() async{
   final response = await http.get('https://corona.lmao.ninja/v2/countries/india');
