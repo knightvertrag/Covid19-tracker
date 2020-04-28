@@ -1,16 +1,63 @@
 # covid19_tracker
 
-A new Flutter project.
+A very simple app to track Covid-19 stats in India. Right now it only gives the total number of infections, deaths and recoveries in India, however I will add numbers for every state. 
 
-## Getting Started
+<img align = "center" src="assets/images/s2.png" height = "400">  <img align = "center" src="assets/images/s1.png" height = "400">
 
-This project is a starting point for a Flutter application.
+## Building the app
 
-A few resources to get you started if this is your first Flutter project:
+*You will require flutter and the Android SDK to follow along.*
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+For the complete set up to start working with flutter please visit here:
+[https://flutter.dev/docs/get-started/install](https://flutter.dev/docs/get-started/install)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Choose your operating system and proceed accordingly.
+ 
+
+  
+
+**Step 1:**
+
+  
+
+Download or clone this repo by using the link below:
+
+  
+
+```
+
+https://github.com/knightvertrag/Covid19-tracker.git
+
+```
+
+  
+
+**Step 2:**
+
+  
+
+Go to project root and execute the following command in console to get the required dependencies:
+
+  
+
+```
+
+flutter pub get
+
+```
+
+  
+
+**Step 3:**
+
+  
+
+Connect your physical device(with debugger options turned on)  or emulator to your IDE.
+
+  
+
+**Step 4:**
+
+  
+
+Start the debug build by running the main.dart file
