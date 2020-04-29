@@ -1,6 +1,6 @@
 # covid19_tracker
 
-A very simple app to track Covid-19 stats in India. Right now it only gives the total number of infections, deaths and recoveries in India, however I will add numbers for every state. 
+A very simple app to track Covid-19 stats around the globe. 
 
 <img align = "center" src="assets/images/s2.png" height = "400">  <img align = "center" src="assets/images/s1.png" height = "400">
 
@@ -61,3 +61,11 @@ Connect your physical device(with debugger options turned on)  or emulator to yo
   
 
 Start the debug build by running the main.dart file
+
+## CONTRIBUTING
+
+1. Any new code you add should maintain the modular structure. Don't dump all the code in the main.dart file.
+
+1. If you find any bugs, want to add any new features or expand upon the preexisting non-fuctional components(the details options for example), open an issue first and add the appropriate labels.
+
+1. And lastly you are free to modify any aspect of the app as you like as long as it serves the basic purpose of providing the correct stats.
