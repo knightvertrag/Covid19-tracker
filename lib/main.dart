@@ -31,11 +31,24 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  String dropdownvalue;
   Future<Data> futureData;
+
+  void changeCountry(String country) {
+    var newCountry = country;
+    Future<Data> newCountryData;
+    newCountryData = fetchData(newCountry);
+    setState(() {
+      dropdownvalue = newCountry;
+      futureData = newCountryData;
+    });
+  }
+
   @override
   void initState() {
     super.initState();
-    futureData = fetchData();
+    futureData = fetchData('India');
+    dropdownvalue = 'India';
   }
 
   @override
@@ -76,19 +89,17 @@ class _HomeScreenState extends State<HomeScreen> {
                             isExpanded: true,
                             underline: SizedBox(),
                             icon: SvgPicture.asset("assets/icons/dropdown.svg"),
-                            value: 'India',
-                            items: [
-                              'India',
-                              'Bangladesh',
-                              'United States',
-                              'Japan'
-                            ].map<DropdownMenuItem<String>>((String value) {
+                            value: dropdownvalue,
+                            items: ['India', 'Bangladesh', 'USA', 'Japan']
+                                .map<DropdownMenuItem<String>>((String value) {
                               return DropdownMenuItem<String>(
                                 value: value,
                                 child: Text(value),
                               );
                             }).toList(),
-                            onChanged: (value) {},
+                            onChanged: (newValue) {
+                              changeCountry(newValue);
+                            },
                           ),
                         ),
                       ],

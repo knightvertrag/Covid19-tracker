@@ -2,8 +2,8 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
 
-Future<Data> fetchData() async{
-  final response = await http.get('https://corona.lmao.ninja/v2/countries/india');
+Future<Data> fetchData(String country) async{
+  final response = await http.get('https://corona.lmao.ninja/v2/countries/$country');
 
   if(response.statusCode == 200) {
     return Data.fromJson(json.decode(response.body));
@@ -11,6 +11,14 @@ Future<Data> fetchData() async{
     throw Exception('Failed to load Data');
   }
 }
+
+// Future<Countries> fetchCountries() async {
+//   final response = await http.get('https://corona.lmao.ninja/v2/countries/');
+
+//   if(response.statusCode == 200) {
+//     return 
+//   }
+// }
 
 class Data {
   final int infected;
@@ -27,3 +35,18 @@ class Data {
     );
   }  
 }
+
+// class Countries {
+//   final List<String> countryList;
+
+//   Countries(this.countryList);
+
+//   factory Countries.fromJson(Map<String, dynamic> json) {
+//     return Countries(
+//       for (var country in json) {
+//         countryList.
+//       } 
+//     );
+//   }
+
+// }
