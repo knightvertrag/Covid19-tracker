@@ -13,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   String dropdownvalue;
   Future<Data> futureData;
+  var date = DateTime.now();
 
   void changeCountry(String country) {
     var newCountry = country;
@@ -102,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     style: kTitleTextstyle,
                                   ),
                                   TextSpan(
-                                    text: "Newest update April 26",
+                                    text: "Newest update ${date.day}/${date.month}/${date.year}",
                                     style: TextStyle(color: kTextLightColor),
                                   ),
                                 ],
